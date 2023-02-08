@@ -1,0 +1,84 @@
+.mainContainer {
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-grow: 1;
+    left: 20%;
+}
+
+.titleContainer {
+    height: auto;
+    flex-direction: row;
+}
+
+.titleText {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -unity-text-align: upper-center;
+    width: 100%;
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.logoContainer {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.buttonsContainer {
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.buttonsContainer > .buttonContainer {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.buttonsContainer > .buttonContainer > .button {
+    width: 80%;
+    height: 80%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+    flex-direction: row;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.creditsContainer {
+}
+
+.creditsText {
+    font-size: 20px;
+    -unity-font-style: bold;
+    white-space: nowrap;
+    -unity-text-align: lower-center;
+}
