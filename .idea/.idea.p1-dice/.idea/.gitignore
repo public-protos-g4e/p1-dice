@@ -12,6 +12,6 @@
 /dataSources/
 /dataSources.local.xml
 # Ignore .idea folder
-.idea/
+/.idea/
 
 
