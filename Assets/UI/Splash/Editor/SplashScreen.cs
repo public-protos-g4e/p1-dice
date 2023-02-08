@@ -9,7 +9,6 @@ public class Splash : EditorWindow
 {
     VisualElement container;
 
-    [MenuItem("ChiriDice/Splash")]
     public static void ShowWindow()
     {
         Splash window = GetWindow<Splash>();

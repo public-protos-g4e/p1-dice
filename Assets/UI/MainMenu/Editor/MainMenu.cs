@@ -10,7 +10,6 @@ public class MainMenu : EditorWindow
     private VisualElement container;
     public const string path = "Assets/UI/MainMenu/Editor/";
 
-
     [MenuItem("ChiriDice/Main menu")]
     public static void ShowWindow()
     {
