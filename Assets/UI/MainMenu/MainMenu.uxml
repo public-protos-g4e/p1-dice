@@ -1,10 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/MainMenu/Editor/MainMenu.uss?fileID=7433441132597879392&amp;guid=6eb36b39d838443949798724770d8361&amp;type=3#MainMenu" />
+    <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=6eb36b39d838443949798724770d8361&amp;type=3#MainMenu" />
     <ui:VisualElement name="MenuMainContainer" class="mainContainer">
         <ui:VisualElement name="TitleContainer" class="titleContainer" style="background-color: rgba(0, 0, 0, 0);">
             <ui:Label tabindex="-1" text="First Project: Chiri Dice" display-tooltip-when-elided="true" name="GameTitle" enable-rich-text="true" class="titleText" />
         </ui:VisualElement>
-        <ui:VisualElement name="LogoContainer" class="logoContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/UI/Assets/SplashLogo.png?fileID=2800000&amp;guid=bb31dffe96abe439ca7d44bfc718513d&amp;type=3#SplashLogo&apos;);" />
+        <ui:VisualElement name="LogoContainer" class="logoContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/UI/Assets/RandomLogo.png?fileID=2800000&amp;guid=970e65d3e39064bddbeb54d5bf266fab&amp;type=3#RandomLogo&apos;);" />
         <ui:VisualElement name="ButtonsContainer" class="buttonsContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
             <ui:VisualElement name="ButtonContainer" class="buttonContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; width: 100%;">
                 <ui:Button text="Start!" display-tooltip-when-elided="true" name="StartButton" class="button" />
@@ -13,7 +13,7 @@
                 <ui:Button text="Leaderboard" display-tooltip-when-elided="true" name="LeaderboardButton" class="button" />
             </ui:VisualElement>
             <ui:VisualElement name="ButtonContainer" class="buttonContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; width: 100%;">
-                <ui:Button text="Exit" display-tooltip-when-elided="true" name="Exit" class="button" />
+                <ui:Button text="Exit" display-tooltip-when-elided="true" name="ExitButton" class="button" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="CreditsContainer" class="creditsContainer" style="background-color: rgba(0, 0, 0, 0);">

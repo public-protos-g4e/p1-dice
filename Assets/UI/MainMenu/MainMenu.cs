@@ -8,7 +8,7 @@ using UnityEditor.UIElements;
 public class MainMenu : EditorWindow
 {
     private VisualElement container;
-    public const string path = "Assets/UI/MainMenu/Editor/";
+    public const string path = "Assets/UI/MainMenu/";
 
     [MenuItem("ChiriDice/Main menu")]
     public static void ShowWindow()

@@ -18,10 +18,10 @@ public class Splash : EditorWindow
     public void CreateGUI()
     {
         this.container = rootVisualElement;
-        VisualTreeAsset visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/SplashScreen.uxml");
+        VisualTreeAsset visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/Splash/Editor/SplashScreen.uxml");
         this.container.Add(visualTree.Instantiate());
 
-        StyleSheet styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/SplashScreen.uss");
+        StyleSheet styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/Splash/Editor/SplashScreen.uss");
         this.container.styleSheets.Add(styleSheet);
     }
 }

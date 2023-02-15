@@ -1,0 +1,17 @@
+.mainScreen {
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.logoContainer {
+    opacity: 1;
+    flex-grow: 1;
+    background-image: url('project://database/Assets/UI/Assets/RandomLogo.png?fileID=2800000&guid=970e65d3e39064bddbeb54d5bf266fab&type=3#RandomLogo');
+    width: 75%;
+    height: auto;
+    align-self: center;
+    -unity-background-scale-mode: scale-to-fit;
+}
