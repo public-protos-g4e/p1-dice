@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
         startButton       = mainMenu.rootVisualElement.Q<Button>("StartButton");
         leaderboardButton = mainMenu.rootVisualElement.Q<Button>("LeaderboardButton");
         exitButton        = mainMenu.rootVisualElement.Q<Button>("ExitButton");
+
+        AddMainMenuButtonEvents();
     }
 
     public void AddMainMenuButtonEvents()
