@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 1493410777}
   - component: {fileID: 1493410776}
   m_Layer: 0
-  m_Name: SplashManager
+  m_Name: SceneChanger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: Main
-  delay: 2.5
+  delay: 1.5
 --- !u!4 &1493410777
 Transform:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SplashManager : MonoBehaviour
 {
-    public string targetScene = "Main";
+    [SerializeField] public string targetScene = "Main";
     public float delay = 3f;
 
     void Start()
