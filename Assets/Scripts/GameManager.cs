@@ -6,57 +6,24 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    // [SerializeField]
-    // private UIManager uim;
-
-    [SerializeField]
-    private UIDocument maiMenu;
-    private VisualElement root;
-    private Button startButton;
-    private Button leaderboardButton;
-    private Button exitButton;
-
-    // @todo Move all this UI Behaviour to a UIManager Class
-    void Awake()
-    {
-        root = maiMenu.rootVisualElement;
-        
-        startButton       = root.Q<Button>("StartButton");
-        leaderboardButton = root.Q<Button>("LeaderboardButton");
-        exitButton        = root.Q<Button>("ExitButton");
-    }
+    [SerializeField] private UIManager uiManager;
 
     void Start()
     {
-        SetUIButtonsAction();
+        // ...
     }
 
-    public void SetUIButtonsAction()
-    {
-        if(startButton != null) {
-            startButton.clickable.clicked += StartGame;
-        }
-        
-        if(leaderboardButton != null) {
-            leaderboardButton.clickable.clicked += SeeLeaderboard;
-        }
-
-        if(exitButton != null) {
-            exitButton.clickable.clicked += ExitGame;
-        }
-    }
-
-    public void StartGame()
+    public static void StartGame()
     {
         Debug.Log("StartGame now");
     }
 
-    public void SeeLeaderboard()
+    public static void SeeLeaderboard()
     {
         Debug.Log("SeeLeaderboard now");
     }
 
-    public void ExitGame()
+    public static void ExitGame()
     {
         Debug.Log("ExitGame");
 #if UNITY_EDITOR
@@ -71,5 +38,6 @@ public class GameManager : MonoBehaviour
     public void ShowMainMenu()
     {
         Debug.Log("ShowMainMenu now");
+        uiManager.ShowUI();
     }
 }
