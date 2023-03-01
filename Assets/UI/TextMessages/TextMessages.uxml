@@ -6,7 +6,7 @@
             <ui:Label tabindex="-1" text="Secondary text :D" display-tooltip-when-elided="true" name="SecondatyText" class="secondaryText" />
         </ui:VisualElement>
         <ui:VisualElement name="ButtonContainer" style="background-color: rgba(0, 0, 0, 0); height: 20%; justify-content: center;">
-            <ui:Button name="BackToMainMenuButton" text="Click me" class="buttonsContainer button" />
+            <ui:Button name="BackToMainMenuButton" text="Back to Main Menu..." class="buttonsContainer button" />
         </ui:VisualElement>
         <ui:VisualElement name="BottomContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: flex-end; height: 10%;">
             <ui:Label tabindex="-1" text="Chiri-no-Dice" display-tooltip-when-elided="true" name="Label" class="bottomText" />

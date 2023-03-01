@@ -1,29 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-using System;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private UIManager uiManager;
+    [SerializeField] private int currentLevel;
+    [SerializeField] private GameObject playerPrefab;
 
     void Start()
     {
-        // ...
+        Debug.Log("Stsart UI scene");
+
+        uiManager.HideMainMenu();
+        uiManager.HideIngameUI();
+        uiManager.HideMessageText();
+
+        uiManager.ShowMainMenu();
+        
+        this.LoadScene(currentLevel);
     }
 
-    public static void StartGame()
+    public void StartGame()
     {
+        uiManager.HideMainMenu();
+        uiManager.ShowIngameUI();
+
         Debug.Log("StartGame now");
+
+        if(this.playerPrefab != null) {
+            Debug.Log("Create Player instance");
+        } else {
+            Debug.Log("PlayerPrefab has not been defined");
+        }
     }
 
-    public static void SeeLeaderboard()
+    private void LoadScene(int level)
+    {
+        string oldLevelName     = "Level" + (level - 1);
+        string currentLevelName = "Level" + level;
+        
+        Scene scene = SceneManager.GetSceneByName(oldLevelName);
+        if(scene.IsValid()) {
+            SceneManager.UnloadSceneAsync(scene);
+        }
+
+        SceneManager.LoadScene(currentLevelName, LoadSceneMode.Additive);
+    }
+
+    public void SeeLeaderboard()
     {
         Debug.Log("SeeLeaderboard now");
     }
 
-    public static void ExitGame()
+    public void ExitGame()
     {
         Debug.Log("ExitGame");
 #if UNITY_EDITOR
@@ -38,6 +69,6 @@ public class GameManager : MonoBehaviour
     public void ShowMainMenu()
     {
         Debug.Log("ShowMainMenu now");
-        uiManager.ShowUI();
+        uiManager.ShowMainMenu();
     }
 }
