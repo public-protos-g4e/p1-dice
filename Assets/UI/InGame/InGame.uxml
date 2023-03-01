@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/InGame/InGame.uss?fileID=7433441132597879392&amp;guid=2a212af22e63a490987b606ed70b1e3f&amp;type=3#InGame" />
+    <ui:VisualElement name="MainContainer" class="mainContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="UpperContainer" class="upperContainer">
+            <ui:Label tabindex="-1" text="Current score" display-tooltip-when-elided="true" name="ScoreText" class="scoreText" style="-unity-font-style: bold; font-size: 25px; -unity-text-align: upper-left; width: 80%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
