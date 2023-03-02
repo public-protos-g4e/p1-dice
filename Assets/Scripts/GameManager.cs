@@ -62,6 +62,7 @@ public class GameManager : Singleton<GameManager>
         uiManager.HideMessageText();
         uiManager.ShowIngameUI();
         player.SetActive(true);
+        this.currentScore = 0;
     }
 
     public void AddScore(int score)
