@@ -1,16 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-using System;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private UIManager uiManager;
+    private static UserData userData;
 
     void Start()
     {
-        // ...
+        Debug.Log("GameManager Start");
+        Debug.Log(Application.persistentDataPath);
+        // Initialize UserData
+        userData = SaveManager.LoadUserData();
+        if(userData == null)
+        {   
+            //TODO: Gather the player's name
+            userData = new UserData("Player", 0, new List<UserScore>());
+            SaveManager.SaveUserData(userData);
+        }
+
     }
 
     public static void StartGame()
@@ -21,6 +29,19 @@ public class GameManager : MonoBehaviour
     public static void SeeLeaderboard()
     {
         Debug.Log("SeeLeaderboard now");
+        
+        SaveManager.AddScoreToLeaderboard(userData, "Walter", 500);
+        SaveManager.AddScoreToLeaderboard(userData, "Jesse", 200);
+        SaveManager.AddScoreToLeaderboard(userData, "Skyler", 300);
+        SaveManager.AddScoreToLeaderboard(userData, "Hank", 400);
+        SaveManager.AddScoreToLeaderboard(userData, "Marie", 100);
+        SaveManager.AddScoreToLeaderboard(userData, "Gus", 600);
+        
+        foreach (var userScore in userData.Leaderboard)
+        {
+            Debug.Log(userScore.Name + " " + userScore.Score);
+        }
+
     }
 
     public static void ExitGame()
