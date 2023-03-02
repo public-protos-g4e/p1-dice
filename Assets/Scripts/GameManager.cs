@@ -88,7 +88,7 @@ public class GameManager : Singleton<GameManager>
             player.GetComponent<Transform>().position = new Vector3(0, 1, 0);
 
             uiManager.setMessagesMainText("Level Complete");
-            uiManager.setMessagesSecondaryText("Go to next Label?");
+            uiManager.setMessagesSecondaryText("Level completed with " + this.currentScore + " points");
             uiManager.ShowMessageText();
             uiManager.HideIngameUI();
             // uiManager.GetMessageButton().clickable = null;
