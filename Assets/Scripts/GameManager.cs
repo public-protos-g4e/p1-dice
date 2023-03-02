@@ -84,7 +84,7 @@ public class GameManager : Singleton<GameManager>
 
         if(this.currentScore > 20) {
             player.SetActive(false);
-            player.GetComponent<Transform>().position = Vector3.zero;
+            player.GetComponent<Transform>().position = new Vector3(0, 1, 0);
 
             uiManager.setMessagesMainText("Level Complete");
             uiManager.setMessagesSecondaryText("Go to next Label?");
