@@ -7,11 +7,15 @@
 }
 
 .logoContainer {
-    opacity: 1;
     flex-grow: 1;
     background-image: url('project://database/Assets/UI/Assets/RandomLogo.png?fileID=2800000&guid=970e65d3e39064bddbeb54d5bf266fab&type=3#RandomLogo');
-    width: 75%;
+    width: 70%;
     height: auto;
     align-self: center;
     -unity-background-scale-mode: scale-to-fit;
+    -unity-text-align: middle-center;
+    border-top-left-radius: 55px;
+    border-bottom-left-radius: 55px;
+    border-top-right-radius: 55px;
+    border-bottom-right-radius: 55px;
 }
