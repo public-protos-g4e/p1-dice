@@ -71,9 +71,9 @@ public class UIManager : MonoBehaviour
         messageText.rootVisualElement.style.display = DisplayStyle.Flex;
     }
 
-    public void setScore(string scoreText)
+    public void SetScore(int scoreText)
     {
-        this.scoreText.text = scoreText;
+        this.scoreText.text = "Current score: " + scoreText;
     }
 
     public void setMessagesMainText(string text)
@@ -86,5 +86,9 @@ public class UIManager : MonoBehaviour
         this.messagesSecondaryText.text = text;
     }
 
+    public Button GetMessageButton()
+    {
+        return messagesBackToMainMenu;
+    }
 
 }

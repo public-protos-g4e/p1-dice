@@ -7,7 +7,8 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private UIManager uiManager;
     [SerializeField] private int currentLevel;
-    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private int currentScore;
+    [SerializeField] private GameObject player;
 
     void Start()
     {
@@ -22,6 +23,11 @@ public class GameManager : Singleton<GameManager>
         this.LoadScene(currentLevel);
     }
 
+    private void Update()
+    {
+        //...
+    }
+
     public void StartGame()
     {
         uiManager.HideMainMenu();
@@ -29,10 +35,11 @@ public class GameManager : Singleton<GameManager>
 
         Debug.Log("StartGame now");
 
-        if(this.playerPrefab != null) {
+        if(this.player != null) {
             Debug.Log("Create Player instance");
+            player.SetActive(true);
         } else {
-            Debug.Log("PlayerPrefab has not been defined");
+            Debug.Log("Player has not been defined");
         }
     }
 
@@ -47,6 +54,34 @@ public class GameManager : Singleton<GameManager>
         }
 
         SceneManager.LoadScene(currentLevelName, LoadSceneMode.Additive);
+    }
+
+    public void GoToNextScene()
+    {
+        LoadScene(this.currentLevel + 1);
+        uiManager.HideMessageText();
+        uiManager.ShowIngameUI();
+        player.SetActive(true);
+    }
+
+    public void AddScore(int score)
+    {
+        this.currentScore += score;
+        
+        uiManager.SetScore(this.currentScore);
+
+        if(this.currentScore > 20) {
+            player.SetActive(false);
+            player.GetComponent<Transform>().position = Vector3.zero;
+
+            uiManager.setMessagesMainText("Level Complete");
+            uiManager.setMessagesSecondaryText("Go to next Label?");
+            uiManager.ShowMessageText();
+            uiManager.HideIngameUI();
+            // uiManager.GetMessageButton().clickable = null;
+            uiManager.GetMessageButton().text = "Go!!";
+            uiManager.GetMessageButton().clickable.clicked += () => GameManager.Instance.GoToNextScene();
+        }
     }
 
     public void SeeLeaderboard()
