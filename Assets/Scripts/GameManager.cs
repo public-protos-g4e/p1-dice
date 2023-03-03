@@ -120,7 +120,7 @@ public class GameManager : Singleton<GameManager>
         Debug.Log("ExitGame");
 #if UNITY_EDITOR
         Debug.Log("ExitGame Editor");
-        UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.ExitPlaymode();
 #else
         Debug.Log("Application.Quit()");
         Application.Quit();
